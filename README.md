@@ -50,10 +50,6 @@ Users should be able to:
                     alt="Desktop solution" width="100%" title="Desktop solution"/>
             </td>
             <td>
-                <img src="./screenshots/tablet-solution.webp"
-                    alt="Tablet solution" width="100%" title="Tablet solution"/>
-            </td>
-            <td>
                 <img src="./screenshots/mobile-solution.webp"
                     alt="Mobile solution" title="Mobile solution" width="100%" />
             </td>
