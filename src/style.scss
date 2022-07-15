@@ -1,0 +1,248 @@
+/* ==== VAR ============ */
+// Text
+$Verydarkdesaturatedblue: hsl(238, 29%, 16%);
+$Softred: hsl(14, 88%, 65%);
+
+// Gradient
+// Background gradient:
+
+$Softviolet: hsl(273, 75%, 66%);
+$Softblue: hsl(240, 73%, 65%);
+
+// Neutral
+//Text
+$Verydarkgrayishblue: hsl(237, 12%, 33%);
+$Darkgrayishblue: hsl(240, 6%, 50%);
+
+// Dividers
+$Lightgrayishblue: hsl(240, 5%, 91%);
+
+/* ==== ATTRIBUTION ==== */
+.attribution {
+    font-size: 0.7rem;
+    text-align: center;
+    font-weight: 700;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    color: white;
+}
+
+.attribution:hover {
+    opacity: 1;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* ==== CHALLENGE ====== */
+body {
+    background: linear-gradient($Softviolet, $Softblue);
+    font-size: 12px;
+    min-height: 100vh;
+    font-family: 'Kumbh Sans', sans-serif;
+    color: $Verydarkdesaturatedblue;
+}
+
+img {
+    max-width: 100%;
+    object-fit: contain;
+}
+
+details[open]>summary {
+    font-weight: bold;
+
+    &::after {
+        transform: rotate3d(0, 0, 1, 180deg);
+    }
+}
+
+main {
+    box-shadow: 10px 10px 32px -2px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    background: $Lightgrayishblue;
+    border-radius: 1rem;
+    padding: 4rem 2rem 2rem 2rem;
+    width: clamp(10rem, 80vw, 32rem);
+
+    summary {
+        margin: 12px 0;
+        padding-right: 10px;
+        font-size: 13px;
+        cursor: pointer;
+        position: relative;
+
+        &:hover {
+            color: $Softred;
+        }
+
+        &::marker {
+            font-size: 0;
+        }
+
+        &::after {
+            content: url("images/icon-arrow-down.svg");
+            position: absolute;
+            right: 0;
+            transform: rotate3d(0);
+            transition: transform 150ms ease-in-out;
+        }
+    }
+
+    h1 {
+        text-align: center;
+        margin: 45px 0 25px 0;
+    }
+}
+
+picture {
+    img {
+        position: absolute;
+        height: 10rem;
+        top: -6rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 10px) scale(1);
+        height: 104px;
+        width: 210px;
+        background: url("./images/bg-pattern-mobile.svg") no-repeat;
+        background-size: contain;
+        animation: levitate 2s ease-in-out infinite alternate;
+    }
+}
+
+@keyframes levitate {
+    from {
+        transform: translate(-50%, -22px) scale(1);
+    }
+
+    to {
+        transform: translate(-50%, 5px) scale(.9);
+    }
+}
+
+@keyframes levitate2 {
+    from {
+        transform: translate(-130px, -40px);
+    }
+
+    to {
+        transform: translate(-130px, -60px);
+    }
+}
+
+@media screen and (min-width: 700px) {
+    main {
+        display: flex;
+        padding: 0;
+        width: clamp(20rem, 80vw, 58rem);
+        transform: translate(-48%, -50%);
+
+        h1 {
+            text-align: left;
+            font-size: 32px;
+            margin: 28px 0 46px 0;
+        }
+
+        img {
+            width: 40%;
+            height: auto;
+            top: 50%;
+            left: -10rem;
+            transform: translateY(-50%);
+        }
+
+        article {
+            width: 50%;
+            padding: 2rem;
+            box-sizing: border-box;
+
+            details {
+                max-width: 21rem;
+                margin: 2rem 0;
+            }
+        }
+    }
+
+    picture {
+        position: relative;
+        width: 50%;
+        height: inherit;
+
+        img {
+            width: 100%;
+            left: -53px;
+        }
+
+        &:after {
+            content: none;
+        }
+    }
+
+}
+
+@media screen and (min-width: 1180px) {
+    main {
+        article {
+            padding: 2rem 1rem;
+        }
+
+        picture {
+            overflow: hidden;
+        }
+
+        picture::after,
+        &::before {
+            content: "";
+            position: absolute;
+        }
+
+        @keyframes levitate3 {
+            from {
+                transform: translateY(50%) scale(1);
+            }
+
+            to {
+                transform: translateY(57%) scale(.9);
+            }
+        }
+
+        picture::after {
+            height: 411px;
+            width: 450px;
+            background: url("./images/bg-pattern-desktop.svg") no-repeat;
+            transform: translateY(50%) scale(1);
+            left: -34px;
+            top: -172px;
+            background-size: contain;
+            animation: levitate3 2s ease-in-out infinite alternate;
+        }
+
+        &::before {
+            height: 184px;
+            width: 191px;
+            background: url("./images/illustration-box-desktop.svg") no-repeat;
+            transform: translate(-130px, -77px);
+            left: 42px;
+            top: 50%;
+            background-size: contain;
+            animation: levitate2 2s ease-in-out infinite alternate;
+            z-index: 20;
+            transition: transform .2s ease-in-out;
+        }
+    }
+}
