@@ -25,9 +25,7 @@ This is a solution to the [FAQ accordion card challenge on Frontend Mentor](http
 -   [My process](#my-process)
     -   [Built with](#built-with)
     -   [What I learned](#what-i-learned)
-    -   [Useful resources](#useful-resources)
 -   [Author](#author)
--   [Acknowledgments](#acknowledgments)
 
 </details>
 
@@ -46,12 +44,12 @@ Users should be able to:
 <table>
         <tr>
             <td>
-                <img src="./screenshots/desktop-solution.webp"
-                    alt="Desktop solution" width="100%" title="Desktop solution"/>
-            </td>
-            <td>
                 <img src="./screenshots/mobile-solution.webp"
                     alt="Mobile solution" title="Mobile solution" width="100%" />
+            </td>
+            <td>
+                <img src="./screenshots/desktop-solution.webp"
+                    alt="Desktop solution" width="100%" title="Desktop solution"/>
             </td>
         </tr>
 </table>
@@ -66,34 +64,16 @@ Users should be able to:
 ### Built with
 
 -   Semantic HTML5 markup
--   CSS custom properties
 -   Flexbox
--   CSS Grid
 -   Mobile-first workflow
--   [React](https://reactjs.org/) - JS library
--   [Next.js](https://nextjs.org/) - React framework
--   [Styled Components](https://styled-components.com/) - For styles
+-   [Scss](https://sass-lang.com)
+-   [Webpack](https://webpack.js.org)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ### What I learned
 
 This challenge was a great learning opportunity, it was also very useful to reinforce previous knowledge, and face problems that had not been presented to me before.
-
-To see how you can add code snippets, see below:
-
-```js
-const proudOfThisFunc = () => {
-    console.log("🎉");
-};
-```
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-### Useful resources
-
--   [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
--   [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -103,12 +83,6 @@ const proudOfThisFunc = () => {
 -   Frontend Mentor - [@CosmoArt](https://www.frontendmentor.io/profile/cosmoart)
 -   Twitter - [@CosmoArt0](https://twitter.com/cosmoart0)
 -   My personal page - [https://cosmoart.github.io](https://cosmoart.github.io)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-## Acknowledgments
-
-<!-- Crédito a otras personas con quien trabaje o me inspire -->
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
