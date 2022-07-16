@@ -51,6 +51,10 @@ img {
     object-fit: contain;
 }
 
+details{
+    border-bottom: 1px solid rgb(0 0 0 / 10%);
+}
+
 details[open]>summary {
     font-weight: bold;
 
